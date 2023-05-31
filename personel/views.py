@@ -69,7 +69,7 @@ class DepartmentPersonelView(ListAPIView):
             """
             Optionally restricts the returned purchases to a given user,
             by filtering against a `department` query parameter in the URL.
-            """
+            """  
             department = self.kwargs['department']
             if department is not None:
                 return Department.objects.filter(name__iexact=department)
